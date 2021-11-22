@@ -27,7 +27,6 @@ if (
   }
 } else if (mes === 2) {
   if (anio % 4 === 0 && anio % 100 !== 0) {
-    arreglo[1] = 29;
     while (dia < 1 || dia > 29) {
       dia = Number(prompt("desde que dia del 1 al 29 quiere averiguar"));
     }
@@ -39,6 +38,9 @@ if (
 }
 
 function sumar() {
+  if (anio % 4 === 0 && anio % 100 !== 0) {
+    arreglo[1] = 29;
+  }
   let cantidadTotal: number = 0;
   let i: number = 0;
   for (i = mes - 1; i < 12; i++) {
